@@ -3,7 +3,6 @@ import requests
 import os
 import urllib.request
 
-sampleUrl = 'https://arca.live/b/lastorigin/8236343'
 opener=urllib.request.build_opener()
 opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
 urllib.request.install_opener(opener)
@@ -11,7 +10,7 @@ urllib.request.install_opener(opener)
 
 def imgDown(url):
     try:
-        savePath = './' + '_'.join((sampleUrl.split('?')[0]).split('/')[-2:])
+        savePath = './' + '_'.join((url.split('?')[0]).split('/')[-2:])
     except:
         savePath = './Downloads'
 
